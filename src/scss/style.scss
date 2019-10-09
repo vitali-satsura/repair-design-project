@@ -1,13 +1,23 @@
 $bg_base: #252525;
-$fs_base: 16px;
 $font_base: Arial, san-serif;
+$color_base: #ffffff;
 $yellow: #E3B873;
 $dark: #131313;
 
+@mixin text-yellow {
+  font-family: FuturaDemiC;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  text-transform: uppercase;
+  text-align: center;
+
+  color: $yellow;  
+}
+
 html {
   background-color: $bg_base;
-  font-size: $fs_base;
   font-family: $font_base;
+  color: $color_base;
 }
 
 /* Container */
@@ -31,21 +41,15 @@ html {
 }
 
 .header__logo {
-  margin: 36px 82px;
+  margin: 2.25rem 5.125rem;
   &-title {
     
-    font-family: FuturaDemiC;
-    font-size: 14px;
-    line-height: 16px;
-    text-transform: uppercase;
-    text-align: center;
-
-    color: $yellow;
+    @include text-yellow;
   }
 }
 
 .header__nav {
-  margin-top: 5px;
+  margin-top: 0.31rem;
   &-items {
     list-style: none; 
     
@@ -56,8 +60,8 @@ html {
   &-link {
     
     font-family: FuturaBookC;
-    font-size: 14px;
-    line-height: 16px;
+    font-size: 0.875rem;
+    line-height: 1rem;
     text-align: center;
     color: #FFFFFF;
     text-transform: uppercase;
@@ -68,23 +72,23 @@ html {
     }
   }
   &-item {
-    padding: 24px;
+    padding: 1.3rem;
     display: inline-block;
   } 
 }
 
 .header__request {
-  margin-top: 36px;
+  margin-top: 2.25rem;
 }
 
 .phone {
-  margin-right: 45px;
+  margin-right: 2.81rem;
   width: 126px;
   height: 16px;
 
   font-family: FuturaDemiC;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 0.875rem;
+  line-height: 1rem;
   text-align: right;
   text-transform: uppercase;
   text-decoration-line: underline;
@@ -95,20 +99,349 @@ html {
 }
 
 .btn {
-  margin-right: 100px;
+  margin-right: 6.25rem;
   width: 161px;
   height: 37px;
 
   background: $yellow;
-  // box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
   border-radius: 2px;
   border: none;
   font-family: FuturaDemiC;
-  font-size: 13px;
-  line-height: 15px;
+  font-size: 0.81rem;
+  line-height: 0.94rem;
   text-align: center;
   text-transform: uppercase;
 
   color: #FFFFFF;
+}
+
+/* Intro */
+.intro {
+  width: 100%;
+  
+  background: $dark;
+  
+  &__inner {
+    position: relative;
+  }
+  &__aside {
+    transform: rotate(90deg);
+    position: absolute;
+    top: 40%;
+    left: 0;
+    z-index: 1;
+
+    &-text {
+      @include text-yellow;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 3.3rem;
+      
+      background-color: $yellow;
+      
+      position: absolute;
+      top: 50%;
+      left: 120%;
+      z-index: 1;      
+    }
+  }
+
+  &__wrapper {
+    margin-left: 5.125rem;
+
+    background: url("../images/order.png") no-repeat;
+    
+    position: relative;
+  }
+
+  &-title {
+    margin: 0;
+    margin-left: 3.75rem;
+    padding-top: 12.125rem;
+
+    font-family: Yeseva One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2.5rem;
+    line-height: 3.31rem;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+  }
+
+  &-title span {
+    color: $yellow;
+  }
+
+  &-text {
+    margin-left: 3.75rem;
+
+    font-family: FuturaBookC;
+    font-size: 1.375rem;
+    line-height: 1.875rem;
+
+    color: #FFFFFF;
+  }
+
+  &-btn {
+    width: 12.94rem;
+    height: 3.19rem;
+    // margin-left: 3.75rem;
+    margin:2.56rem 0 13rem 3.75rem;
+
+    background: $yellow;
+    border-radius: 2px;
+    border: none;
+    font-family: FuturaDemiC;
+    font-size: 0.81rem;
+    line-height: 0.94rem;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+
+    &.submit {
+      margin-left: 1.25rem;
+
+      border: 1px solid #FFFFFF;
+      box-sizing: border-box;
+      background: rgba(255, 255, 255, 0);
+      
+    }
+  }
+}
+
+/* Scroll */
+.scroll {
+  background-color: $dark;
+  position: absolute;
+  top: 87%;
+  left: -7%;
+  z-index: 2;
+  &-link {
+    display: block;
+    padding: 2.5rem 5.625rem 2.5rem 3rem;
+    
+    font-family: Yeseva One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    color: #FFFFFF;
+    background-color: $dark;
+    background-image: url("../images/scroll.svg");
+    background-repeat: no-repeat;
+    background-position: 80% 47%;
+
+  }
+}
+
+/* Projects */
+.projects {
+  width: 100%;
+
+  background: $dark;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    // align-items: center;
+  }
+
+  &__description {
+    width: 30%;
+    margin-top: 11rem;
+    margin-left: 6.3rem;
+    
+    &-title {
+      font-family: Yeseva One;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.69rem;
+      line-height: 2.31rem;
+      letter-spacing: -0.07em;
+      text-transform: uppercase;
+
+      color: $yellow;
+
+      &::after {
+        content: "";
+        display: block;
+        height: 2px;
+        width: 5.75rem;
+
+        background-color: $yellow;
+
+        transform: translate(160px, -20px); 
+      }
+    }
+
+    &-text {
+      margin-top: 2.125rem;
+      margin-bottom: 2.625rem;
+
+
+
+      font-family: FuturaBookC;
+      font-size: 18px;
+      line-height: 29px;
+
+      color: #FFFFFF;
+    }
+
+    &-items {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+
+    &-item {
+      
+      
+      &:nth-child(1) {
+        margin-bottom: 2rem;
+        margin-right: 6.3rem;
+      }
+
+      &:nth-child(3) {
+        margin-right: 3.7rem;
+      }
+
+      &--title {
+        margin: 0;
+        margin-bottom: 0.5rem;
+
+        font-family: Yeseva One;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 25px;
+        text-transform: uppercase;
+
+        color: $yellow;
+      }
+
+      &--text {
+        font-family: FuturaBookC;
+        font-size: 15px;
+        line-height: 20px;
+
+        color: #FFFFFF;
+      }
+    }
+  }
+
+  &__slider {
+    margin-top: 6.69rem;
+    margin-bottom: 5.75rem;
+
+
+    &-items {
+      margin-bottom: 3.25rem;
+      // margin-left: 2rem;
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    &-item {
+      margin-right: 3.75rem;
+
+      font-family: Yeseva One;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 19px;
+      text-transform: uppercase;
+
+      color: rgba(255, 255, 255, 0.3);
+
+      &.active {
+        color: $yellow;
+      }
+
+      &.active::after {
+        content: "";
+        display: block;
+        height: 2px;
+        width: 100%;
+
+        background-color: $yellow;
+
+        // transform: translate(160px, -20px); 
+      }
+    }
+
+    &-slides {
+      display: flex;
+      justify-content: flex-start;
+    }
+    
+    &-image {
+      &--admiral {
+        margin-right: 1rem;
+      }
+    }
+
+    &-slide2 {
+      position: relative;
+    }
+
+    &-button {
+      width: 3.8vw;
+      height: 3.8vw;
+      max-width: 55px;
+      max-height: 55px;
+
+      border-radius: 50%;
+      border: none;
+
+      background-color: $yellow;
+      background-image: url("../images/arrow.svg");
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(80%, 370%);
+    }
+
+    &-dots {
+      // width: 30%;
+      margin: 0 auto;
+      margin-top: 3rem;
+    
+      padding-left: 4rem;
+      display: flex;
+      justify-content: flex-start;
+
+      background-image: url("../images/arrow-long-left.svg"), url("../images/arrow-long.svg");
+      background-repeat: no-repeat, no-repeat;
+      background-position: 1% 0, 45% 0;
+    }
+
+    &-dot {
+      cursor: pointer;
+      height: 10px;
+      width: 10px;
+      margin: 0 10px;
+
+      background-color: rgba(255, 255, 255, 0.3);;
+      border-radius: 50%;
+      display: inline-block;
+      
+      &.dot-active {
+        height: 10px;
+        width: 10px;
+        background-color: #FFFFFF;
+      }
+    }
+  }
 }
 
