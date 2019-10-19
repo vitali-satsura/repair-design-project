@@ -41,21 +41,29 @@ html {
 }
 
 .header__logo {
-  margin: 2.25rem 5.125rem;
+  margin: 2.33% 5.7%;
   &-title {
     
     @include text-yellow;
+    @media only screen and (max-width: 375px) {
+      margin-top: 22px;
+      margin-bottom: 22px;
+      font-size: 12px;
+      line-height: 14px;
+    }
   }
 }
 
 .header__nav {
-  margin-top: 0.31rem;
+  margin-top: 5px;
+  @media only screen and (max-width: 375px) {
+    display: none;
+  }
   &-items {
     list-style: none; 
     
     padding-left: 0;
-    // display: flex;
-    // justify-content: space-between; 
+   
   }
   &-link {
     
@@ -75,20 +83,22 @@ html {
     }
   }
   &-item {
-    padding: 1.3rem;
+    padding: 21px;
     display: inline-block;
   } 
 }
 
 .header__request {
-  margin-top: 2.25rem;
+  margin-top: 34px;
+  @media only screen and (max-width: 375px) {
+    margin-top: 27px;
+  }
 }
 
 .phone {
-  margin-right: 2.81rem;
-  width: 126px;
-  height: 16px;
-
+  margin-right: 44px;
+  width: 8.75vw;
+  max-width: 126px;
   font-family: FuturaDemiC;
   font-size: 0.875rem;
   line-height: 1rem;
@@ -99,12 +109,25 @@ html {
   color: #E3B873;
   outline: none;
   border: none;
+  @media only screen and (max-width: 375px) {
+    margin-right: 18px;
+    width: 107px;
+    font-family: FuturaDemiC;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: right;
+    text-decoration: none;
+
+    color: #FFFFFF;
+  }
 }
 
 .btn {
-  margin-right: 6.25rem;
-  width: 161px;
-  height: 37px;
+  margin-right: 100px;
+  max-width: 161px;
+  max-height: 37px;
+  width: 11.2vw;
+  height: 2.47vw;
 
   background: $yellow;
   border-radius: 2px;
@@ -117,6 +140,9 @@ html {
 
   color: #FFFFFF;
   cursor: pointer;
+  @media only screen and (max-width: 375px) {
+    display: none;
+  }
 }
 
 /* Intro */
@@ -134,6 +160,9 @@ html {
     top: 40%;
     left: 0;
     z-index: 1;
+    @media only screen and (max-width: 375px) {
+      display: none;
+    }
 
     &-link {
       @include text-yellow;
@@ -144,7 +173,7 @@ html {
       content: "";
       display: block;
       height: 2px;
-      width: 3.3rem;
+      width: 3.67vw;
       
       background-color: $yellow;
       
@@ -156,17 +185,22 @@ html {
   }
 
   &__wrapper {
-    margin-left: 5.125rem;
+    margin-left: 5.7%;
 
     background: url("../images/order.png") no-repeat;
-    
+    background-size: cover;
     position: relative;
+    @media only screen and (max-width: 375px) {
+      margin-left: 0;
+      background: url("../images/intro-mobile.png") no-repeat;
+      height: 476px;
+    }
   }
 
   &-title {
     margin: 0;
-    margin-left: 3.75rem;
-    padding-top: 12.125rem;
+    margin-left: 4.2%;
+    padding-top: 13.5%;
 
     font-family: Yeseva One;
     font-style: normal;
@@ -176,6 +210,12 @@ html {
     text-transform: uppercase;
 
     color: #FFFFFF;
+    @media only screen and (max-width: 375px) {
+      padding-top: 85px;
+      margin-left: 18px;
+      font-size: 23px;
+      line-height: 31px;
+    }
   }
 
   &-title span {
@@ -183,20 +223,29 @@ html {
   }
 
   &-text {
-    margin-left: 3.75rem;
+    margin-left: 4.2%;
 
     font-family: FuturaBookC;
     font-size: 1.375rem;
     line-height: 1.875rem;
 
     color: #FFFFFF;
+    @media only screen and (max-width: 375px) {
+      margin-left: 18px;
+      margin-right: 18px;
+      width: 300px;
+      font-size: 18px;
+      line-height: 24px;
+    }
   }
 
   &-btn {
-    width: 12.94rem;
-    height: 3.19rem;
-    // margin-left: 3.75rem;
-    margin:2.56rem 0 13rem 3.75rem;
+    max-width: 207px;
+    max-height: 51px;
+    width: 14.4vw;
+    height: 3.54vw;
+    
+    margin:2.84% 0 14.4% 4.2%;
 
     background: $yellow;
     border-radius: 2px;
@@ -209,13 +258,25 @@ html {
 
     color: #FFFFFF;
     cursor: pointer;
+    @media only screen and (max-width: 375px) {
+      display: block;
+      margin: 32px 18px 26px 18px;
+      max-width: 338px;
+      width: 338px;
+      height: 51px;
+
+    }
 
     &.submit {
-      margin-left: 1.25rem;
+      margin-left: 1.4%;
 
       border: 1px solid #FFFFFF;
       box-sizing: border-box;
       background: rgba(255, 255, 255, 0);
+      @media only screen and (max-width: 375px) {  
+        margin: 0 18px 61px 18px;
+        
+      }
       
     }
   }
@@ -225,18 +286,21 @@ html {
 .scroll {
   background-color: $dark;
   position: absolute;
-  top: 87%;
+  top: 92%;
   left: -7%;
   z-index: 2;
+  @media only screen and (max-width: 375px) {
+    display: none;    
+  }
   &-link {
     display: block;
-    padding: 2.5rem 5.625rem 2.5rem 3rem;
+    padding: 36px 90px 36px 48px;
     
     font-family: Yeseva One;
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
-    line-height: 19px;
+    font-size: 0.875rem;
+    line-height: 1.2rem;
     text-transform: uppercase;
     text-decoration: none;
 
@@ -257,13 +321,21 @@ html {
   &__inner {
     display: flex;
     justify-content: space-between;
-    // align-items: center;
+    @media only screen and (max-width: 375px) {
+      flex-direction: column;   
+    }
+    
   }
 
   &__description {
     width: 30%;
-    margin-top: 11rem;
-    margin-left: 6.3rem;
+    margin-top: 176px;
+    margin-left: 100px;
+    @media only screen and (max-width: 375px) {
+      width: 100%;
+      margin-top: 36px;
+      margin-left: 0;   
+    }
     
     &-title {
       font-family: Yeseva One;
@@ -275,88 +347,157 @@ html {
       text-transform: uppercase;
 
       color: $yellow;
-
+      @media only screen and (max-width: 375px) {
+        font-size: 22px;
+        line-height: 30px;
+        text-align: center;
+      }
       &::after {
         content: "";
         display: block;
         height: 2px;
-        width: 5.75rem;
+        max-width: 92px;
+        width: 6.4vw;
 
         background-color: $yellow;
 
-        transform: translate(160px, -20px); 
+        transform: translate(160px, -20px);
+        @media only screen and (max-width: 375px) {
+          display: none;    
+        } 
       }
     }
 
     &-text {
-      margin-top: 2.125rem;
-      margin-bottom: 2.625rem;
-
-
+      margin-top: 34px;
+      margin-bottom: 42px;
 
       font-family: FuturaBookC;
-      font-size: 18px;
-      line-height: 29px;
+      font-size: 1.125rem;
+      line-height: 1.81rem;
 
       color: #FFFFFF;
+      @media only screen and (max-width: 375px) {
+        margin-left: 32px;
+        width: 311px;
+        font-size: 14px;
+        line-height: 22px;
+        text-align: center;
+      }
+    }
+
+    &-slider {
+      display: none;
+      @media only screen and (max-width: 375px) {
+        margin-bottom: 36px;
+        display: block;
+        text-align: center;
+        position: relative;
+      }
+
+      &--arrow {
+        @media only screen and (max-width: 375px) {
+          width: 36px;
+          height: 36px;
+          background-color: $yellow;
+          border-radius: 50%;
+        }
+
+        &:first-child {
+          background-image: url("../images/left-arrow.svg");
+          background-repeat: no-repeat;
+          background-position: 50% 50%;
+          position: absolute;
+          top: 40%;
+          left: 5%;
+        }
+        &:last-child {
+          background-image: url("../images/right-arrow.svg");
+          background-repeat: no-repeat;
+          background-position: 50% 50%;
+          position: absolute;
+          top: 40%;
+          left: 85%;
+        }
+      }
+
     }
 
     &-items {
       display: flex;
       justify-content: flex-start;
       flex-wrap: wrap;
+      @media only screen and (max-width: 375px) {
+       margin-left: 18px;
+      }
     }
 
     &-item {
-      
-      
       &:nth-child(1) {
-        margin-bottom: 2rem;
-        margin-right: 6.3rem;
+        margin-bottom: 32px;
+        margin-right: 100px;
+        @media only screen and (max-width: 375px) {
+          margin-bottom: 37px;
+          margin-right: 60px;
+        }
       }
 
       &:nth-child(3) {
-        margin-right: 3.7rem;
+        margin-right: 60px;
+        @media only screen and (max-width: 375px) {
+          margin-bottom: 37px;
+          margin-right: 42px;
+        }
       }
 
       &--title {
         margin: 0;
-        margin-bottom: 0.5rem;
+        margin-bottom: 8px;
 
         font-family: Yeseva One;
         font-style: normal;
         font-weight: normal;
-        font-size: 18px;
-        line-height: 25px;
+        font-size: 1.125rem;
+        line-height: 1.56rem;
         text-transform: uppercase;
 
         color: $yellow;
+        @media only screen and (max-width: 375px) {
+          font-size: 14px;
+          line-height: 138.6%;    
+        }
       }
 
       &--text {
         font-family: FuturaBookC;
-        font-size: 15px;
-        line-height: 20px;
+        font-size: 0.94rem;
+        line-height: 1.25rem;
 
         color: #FFFFFF;
+        @media only screen and (max-width: 375px) {
+          font-size: 14px;
+          line-height: 135.84%;
+        }
       }
     }
   }
 
   &__slider {
-    margin-top: 6.69rem;
-    margin-bottom: 5.75rem;
-
+    margin-top: 107px;
+    margin-bottom: 92px;
+    @media only screen and (max-width: 375px) {
+      display: none;    
+    }
 
     &-items {
-      margin-bottom: 3.25rem;
-      // margin-left: 2rem;
+      margin-bottom: 52px;
+      
       display: flex;
       justify-content: flex-start;
     }
 
     &-item {
-      margin-right: 3.75rem;
+      margin-right: 60px;
 
       font-family: Yeseva One;
       font-style: normal;
@@ -366,7 +507,7 @@ html {
       text-transform: uppercase;
 
       color: rgba(255, 255, 255, 0.3);
-
+      
       &.active {
         color: $yellow;
       }
@@ -377,9 +518,7 @@ html {
         height: 2px;
         width: 100%;
 
-        background-color: $yellow;
-
-        // transform: translate(160px, -20px); 
+        background-color: $yellow; 
       }
     }
 
@@ -390,7 +529,14 @@ html {
     
     &-image {
       &--admiral {
-        margin-right: 1rem;
+        margin-right: 16px;
+        width: 47.2vw;
+        max-width: 679px;
+      }
+
+      &--thieves {
+        width: 10vw;
+        max-width: 145px;
       }
     }
 
@@ -418,25 +564,23 @@ html {
       transform: translate(80%, 370%);
     }
 
-    &-dots {
-      // width: 30%;
+    &-dots {      
       margin: 0 auto;
-      margin-top: 3rem;
-    
-      padding-left: 4rem;
+      margin-top: 48px;    
+      
+      padding-bottom: 10px;
       display: flex;
       justify-content: flex-start;
-
-      background-image: url("../images/arrow-long-left.svg"), url("../images/arrow-long.svg");
-      background-repeat: no-repeat, no-repeat;
-      background-position: 1% 0, 45% 0;
+      @media only screen and (max-width: 375px) {
+        display: none;    
+      }
     }
 
     &-dot {
       cursor: pointer;
       height: 10px;
       width: 10px;
-      margin: 0 10px;
+      margin: 0 5px;
 
       background-color: rgba(255, 255, 255, 0.3);;
       border-radius: 50%;
@@ -455,7 +599,10 @@ html {
 .control {
   width: 100%;
 
-  background: linear-gradient(to bottom, #131313 0%, #131313 26vw, #fff 26vw, #fff 100%);
+  background: linear-gradient(to bottom, #131313 0%, #131313 375px, #fff 375px, #fff 100%);
+  @media only screen and (max-width: 375px) {
+    background: $dark;    
+  }
   &__inner {
     display: flex;
     flex-direction: column;
@@ -464,8 +611,8 @@ html {
   }
 
   &-title {
-    margin-bottom: 3rem;
-    padding-bottom: 2.5rem;
+    margin-bottom: 48px;
+    padding-bottom: 40px;
 
     font-family: Yeseva One;
     font-style: normal;
@@ -479,79 +626,117 @@ html {
     background-image: url("../images/camera.svg");
     background-repeat: no-repeat;
     background-position: 35px 40px;
+    @media only screen and (max-width: 375px) {
+      font-size: 22px;
+      line-height: 138.6%;    
+    }
   }
 
   &__wrapper-video {
-    margin-bottom:  6.16rem;
+    margin-bottom:  98px;
+    @media only screen and (max-width: 375px) {
+      margin-bottom: 50px;
+      
+    }
 
     position: relative;
     &::after {
       content: "";
       display: block;
-      width: 3.9vw;
+      
       height: 2px;
-      max-width: 55px;
+      width: 55px;
 
       position: absolute;
       text-align: center;
       background-color: $yellow;
       transform: translate(375px, 60px);
+      @media only screen and (max-width: 375px) {
+        transform: translate(140px, 20px);
+        
+      }
+
     }
   }
 
-  &-video {
-    
+  &-video {    
     width: 56vw;
     height: 30vw;
     max-width: 817px;
     max-height: 434px;
-    
-    object-fit: inherit;
 
-    
+    @media only screen and (max-width: 375px) {
+      width: 340px;
+      height: 207px;      
+    }
   }
 
   &-text {
-    margin-bottom: 5.8rem;
+    margin-bottom: 93px;
     width: 50%;
 
     font-family: FuturaBookC;
-    font-size: 20px;
-    line-height: 34px;
+    font-size: 1.25rem;
+    line-height: 2.125rem;
     text-align: center;
 
     color: #363636;
+    @media only screen and (max-width: 375px) {
+      margin-left: 18px;
+      margin-right: 18px;
+      margin-bottom: 60px;
+      width: 95%;
+      font-size: 14px;
+      line-height: 169.8%;
+      /* or 24px */
+      text-align: center;
+
+      color: #FFFFFF;      
+    }
   }
 
   &-form {
-    margin-bottom: 9.25rem;
-    
+    margin-bottom: 148px;
+    @media only screen and (max-width: 375px) {
+      margin-bottom: 62px;  
+       
+    }  
     
     &__wrapper {
-      margin-bottom: 2.44rem;
+      margin-bottom: 39px;
       display: flex;
       justify-content: center;
+      @media only screen and (max-width: 375px) {
+        flex-direction: column;    
+      }
     }
     &--block {
       display: inline-block;
-      margin-right: 3.125rem;
+      margin-right: 50px;
+      @media only screen and (max-width: 375px) {
+        margin-right: 0;      
+      }
       
       & label {
         display: block;
 
         font-family: FuturaBookC;
-        font-size: 15px;
-        line-height: 20px;
+        font-size: 0.94rem;
+        line-height: 1.25rem;
 
         color: rgba(54, 54, 54, 0.5);
+        @media only screen and (max-width: 375px) {
+          font-size: 15px;
+          line-height: 20px;
+
+          color: rgba(255, 255, 255, 0.5);    
+        }
 
         & input {
           display: block;
-          max-width: 231px;
-          max-height: 25px;
-          width: 16vw;
-          height: 1.75vw;
-
+          width: 231px;
+          height: 25px;
+          
           font-family: FuturaBookC;
           font-size: 1.125rem;
           line-height: 1.5rem;
@@ -559,6 +744,23 @@ html {
           color: #363636;
           border: none;
           border-bottom: 1px solid rgba(54, 54, 54, 0.3);
+          @media only screen and (max-width: 375px) {
+            width:340px;
+            
+            font-family: FuturaBookC;
+            font-size: 18px;
+            line-height: 138.72%;
+            /* or 25px */
+
+            color: #FFFFFF; 
+            background-color: $dark; 
+            border-bottom: 1px solid #FFFFFF;    
+          }
+          &[type="text"] {
+            @media only screen and (max-width: 375px) {
+              margin-bottom: 63px;   
+            }
+          }
 
         }
       }
@@ -566,15 +768,12 @@ html {
 
     &--submit {
       // margin-top: 1.1rem;
-      max-width: 200px;
-      max-height: 51px;
-      width: 13.9vw;
-      height: 3.5vw;
-
+      width: 200px;
+      height: 51px;
+      
       font-family: FuturaDemiC;
       font-size: 0.94rem;
       line-height: 1.625rem;
-      
       text-align: center;
       text-transform: uppercase;
 
@@ -582,17 +781,26 @@ html {
       background-color: $yellow;
       border: none;
       cursor: pointer;
+      @media only screen and (max-width: 375px) {
+        width: 340px;
+        position: absolute;               
+        transform: translate(0, 210%);
+      }
 
     }
 
     &__group {
-      text-align: center;
-     
+      text-align: center;  
       
     }
   }
 }
 
+.button__wrapper {
+  @media only screen and (max-width: 375px) {
+    position: relative;    
+  }
+}
 /* Checkbox */
 .control__group-label {
   display: block;
@@ -603,10 +811,14 @@ html {
   cursor: pointer;
 
   font-family: FuturaBookC;
-  font-size: 16px;
-  line-height: 22px;
+  font-size: 1rem;
+  line-height: 1.375rem;
   text-align: center;
   color: #181818;
+  @media only screen and (max-width: 375px) {
+    color: #FFFFFF;
+    text-align: left;
+  }
   
 }
 .control__group-label input {
@@ -622,6 +834,9 @@ html {
   width: 20px;
   background: #e3b873;
   border: 0px solid #000000;
+  @media only screen and (max-width: 375px) {
+    left: 1%;
+  }
 }
 
 
@@ -671,7 +886,7 @@ html {
   background-color: #ffffff;
   &-title {
     margin: 0;
-    margin-bottom: 2rem;
+    margin-bottom: 32px;
     padding-bottom: 40px;
 
     font-family: Yeseva One;
@@ -686,6 +901,12 @@ html {
     background-image: url("../images/hammer.svg");
     background-repeat: no-repeat;
     background-position: 50% 100%;
+    @media only screen and (max-width: 375px) {
+      padding-top: 77px;      
+
+      font-size: 22px;
+      line-height: 138.6%;
+    }
   }
 
   &__inner {
@@ -694,13 +915,22 @@ html {
     display: flex; 
     justify-content: center;
     align-items: center;
+    @media only screen and (max-width: 375px) {
+      flex-direction: column;
+      width: 100%;
+      
+    }
     
   }
 }
 
 .card {
   height: 680px;
-  margin-right: 2rem;
+  margin-right: 32px;
+  @media only screen and (max-width: 375px) {
+    margin-right: 0;
+    height: 550px;
+  }
 
   &__item {
     max-width: 330px;
@@ -712,11 +942,16 @@ html {
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
     
     transform: translate(10%, 100%);
+    @media only screen and (max-width: 375px) {
+      width: 270px;
+      height: 241px;
+      transform: translate(0, 95%);
+    }
   }
 
   &-title {
-    padding-top: 1.56rem;
-    margin-left: 1.5rem;
+    padding-top: 25px;
+    margin-left: 24px;
 
     font-family: Yeseva One;
     font-style: normal;
@@ -725,6 +960,11 @@ html {
     line-height: 1.56rem;
 
     color: #363636;
+    @media only screen and (max-width: 375px) {
+      padding-top: 21px;
+      font-size: 15px;
+      line-height: 138.6%;
+    }
   }
 
   &-image {
@@ -734,6 +974,10 @@ html {
     height: 29vw;
 
     position: relative;
+    @media only screen and (max-width: 375px) {
+      width: 340px;
+      height: 365px;
+    }
     &.redecorating {
       background: url("../images/redecorating.png") no-repeat;
       background-size: contain;
@@ -758,6 +1002,10 @@ html {
     line-height: 1.56rem;
 
     color: #959595;
+    @media only screen and (max-width: 375px) {
+      font-size: 13px;
+      line-height: 169.8%;
+    }
   }
 
   &-button {
@@ -777,6 +1025,13 @@ html {
     background-color: $yellow;
     border: none;
     box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+    @media only screen and (max-width: 375px) {
+      width: 190px;
+      height: 40px;
+
+      font-size: 15px;
+      line-height: 138.6%;
+    }
   }
 }
 
@@ -784,6 +1039,9 @@ html {
 
 .measurement {
   background-color: #FFFFFF;
+  @media only screen and (max-width: 375px) {
+    display: none;
+  }
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -795,6 +1053,10 @@ html {
     
     background: url("../images/house.png") no-repeat;
     position: relative;
+
+    @media only screen and (max-width: 1260px) {
+      display: none;
+    }
   }
   &__advantages {
     max-width: 656px;
@@ -804,8 +1066,7 @@ html {
 
     border: 3px solid $yellow;
     border-left: 0;
-    // border-top: 0;
-    // border-bottom: 0;
+   
     border-radius: 50%;
     transform: translate(-27%, 8%);
 
@@ -942,8 +1203,8 @@ html {
         display: block;
 
         font-family: FuturaBookC;
-        font-size: 15px;
-        line-height: 20px;
+        font-size: 0.94rem;
+        line-height: 1.25rem;
 
         color: rgba(255, 255, 255, 0.5);
 
@@ -981,8 +1242,8 @@ html {
   cursor: pointer;
 
   font-family: FuturaBookC;
-  font-size: 16px;
-  line-height: 22px;
+  font-size: 1rem;
+  line-height: 1.375rem;
   
   color: #FFFFFF;
   
@@ -1044,6 +1305,7 @@ html {
 }
 
 .save__wrapper {
+  margin-bottom: 242px;
   display: flex;
   justify-content: flex-start;
 }
@@ -1068,10 +1330,1233 @@ html {
   margin-top: 15px;
 
   font-family: FuturaDemiC;
-  font-size: 20px;
-  line-height: 25px;
+  font-size: 1.25rem;
+  line-height: 1.56rem;
 
   color: #E3B873;
 
   text-shadow: 0px 3px 10px rgba(227, 184, 115, 0.15);
 }
+
+/* Styles */
+.styles {
+  background-color: #FFFFFF;
+  @media only screen and (max-width: 375px) {
+    background: linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF 210px, #131313 210px, #131313 100%);
+  }
+
+  &__mobile {
+    display: none;
+    @media only screen and (max-width: 375px) {
+      display: block;
+      &-title {
+        margin: 0;
+        margin-bottom: 24px;
+        padding-top: 10px;
+        
+        font-family: Yeseva One;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 22px;
+        line-height: 138.6%;
+        /* or 30px */
+        text-align: center;
+        text-transform: uppercase;
+
+        color: #E3B873;
+      }
+      &-slider {
+        @media only screen and (max-width: 375px) {
+          
+          text-align: center;
+          position: relative;
+        }
+  
+        &--arrow {
+          @media only screen and (max-width: 375px) {
+            width: 36px;
+            height: 36px;
+            background-color: $yellow;
+            border-radius: 50%;
+          }
+  
+          &:first-child {
+            background-image: url("../images/left-arrow.svg");
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            position: absolute;
+            top: 40%;
+            left: 5%;
+          }
+          &:last-child {
+            background-image: url("../images/right-arrow.svg");
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            position: absolute;
+            top: 40%;
+            left: 85%;
+          }
+        }  
+      }
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: flex-start;
+
+    background-image: url("../images/styles.png");
+    background-repeat: no-repeat;
+    @media only screen and (max-width: 375px) {
+      display: none;
+    }
+  }
+
+  &-title {
+    margin: 137px 177px 47px 99px;
+    width: 300px;
+
+    font-family: Yeseva One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.69rem;
+    line-height: 2.31rem;
+    text-transform: uppercase;
+
+    color: #E3B873;
+  }
+
+  &-list {
+    list-style: none; 
+    padding-left: 0;
+    margin-left: 99px;
+    
+
+  }
+
+  &__items {
+    margin-bottom: 250px;
+  }
+
+  &-item {
+    margin-bottom: 16px;
+  }
+
+  &-link {
+    text-decoration: none;
+    font-family: Proxima Nova;
+    font-size: 1.25rem;
+    line-height: 2.125rem;
+
+    color: #FFFFFF;
+    &.active {
+      color: $yellow;
+      border-bottom: 2px solid $yellow;
+    }
+  }
+
+  &__slider {
+    width: 60%;
+    position: relative;
+  }
+
+  &__slider-image {
+    display: block;
+    max-width: 354px;
+    width: 24.6vw;
+  }
+
+  &-slide.one {
+    position: absolute;
+    top:-5%;
+    left: 0;
+    z-index: 1;
+  }
+
+  &-slide.two {
+    position: absolute;
+    top:-11%;
+    left: 47%;
+    z-index: 1;
+    @media (max-width: 1260px) {
+      display: none;
+    }
+  }
+
+  &-slide.three {
+    position: absolute;
+    top: 53%;
+    left: 0;
+    z-index: 1;
+    
+  }
+
+  &-slide.four{
+    position: absolute;
+    top: 19%;
+    left: 47%;
+    z-index: 1;
+    @media (max-width: 1260px) {
+      display: none;
+    }
+  }
+}
+
+/* Deisign project cards*/
+.design {
+  width: 100%;
+
+  background: linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF 390px, #131313 390px, #131313 100%);
+  @media only screen and (max-width: 375px) {
+    background: #131313;
+  }
+  &.cards-title {
+    background-image: url("../images/pencil.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    @media only screen and (max-width: 375px) {
+      font-family: Yeseva One;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 22px;
+      line-height: 138.6%;
+      /* or 30px */
+      text-align: center;
+      text-transform: uppercase;
+
+      color: #FFFFFF;
+    }
+  }
+  &-text {
+    display: none;
+    @media only screen and (max-width: 375px) {
+      display: block;
+      margin-left: 18px;
+      margin-right: 23px;
+
+      font-family: FuturaBookC;
+      font-size: 15px;
+      line-height: 135.84%;
+      /* or 20px */
+      text-align: center;
+
+      color: #FFFFFF;
+    }
+  }
+}
+
+.mini {
+  max-width: 330px;
+  max-height: 211px;
+  width: 23vw;
+  height: 14.7vw;
+
+  transform: translate(9%, 135%);
+  @media only screen and (max-width: 375px) {
+    width: 270px;
+    height: 177px;
+
+    transform: translate(0, 126%);
+  }
+}
+
+.full {
+  max-width: 330px;
+  max-height: 402px;
+  width: 23vw;
+  height: 28vw;
+
+  transform: translate(10%, 68%);
+  @media only screen and (max-width: 375px) {
+    width: 270px;
+    height: 241px;
+
+    transform: translate(0, 95%);
+    
+  }
+}
+
+.hidden {
+  @media only screen and (max-width: 375px) {
+    display: none;
+  }
+}
+
+.design-image.overhaul {
+  @media only screen and (max-width: 375px) {
+    background: url("../images/designer-repair.png") no-repeat;
+    background-size: contain;
+  }
+}
+
+.design-image.designer-repair {
+  @media only screen and (max-width: 375px) {
+    background: url("../images/overhaul.png") no-repeat;
+    background-size: contain;
+  }
+}
+
+.card.first {
+  @media only screen and (max-width: 375px) {
+    height: 485px;
+  }
+}
+
+
+/* Steps */
+.steps {
+  width: 100%;
+
+  background-color: $dark;
+  @media only screen and (max-width: 375px) {
+    display: none;
+  }
+  &__inner {
+    margin-left: 99px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__wrapper {
+    width: 25%;
+  }
+
+  &__heading {
+    margin-top: 50px;
+    margin-bottom: 92px;
+    &-subtitle {
+      font-family: FuturaDemiC;
+      font-size: 15px;
+      line-height: 21px;
+      text-transform: uppercase;
+
+      color: #FFFFFF;
+    }
+
+    &-title {
+      font-family: Yeseva One;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 27px;
+      line-height: 37px;
+      text-transform: uppercase;
+
+      color: #E3B873;
+      
+      &::after {
+        content: "";
+        display: block;
+        height: 2px;
+        width: 92px;
+
+        background-color: $yellow;
+
+        transform: translate(200px, -20px); 
+      }
+    }
+  }
+
+  &__items {
+    margin-top: 150px;
+    width: 67%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  &-item {
+    
+    
+    max-width: 127px;
+    // max-height: 80px;
+    width: 8.8vw;
+    height: 100px;
+
+    &:nth-child(1) {
+      margin-right: 200px;
+    }
+    &:nth-child(2) {
+      margin-right: 200px;
+    }
+
+    &:nth-child(4) {
+      margin-right: 200px;
+    }
+    &:nth-child(5) {
+      margin-right: 200px;
+    }
+
+    &--number {
+      margin-bottom: 60px;
+
+      font-family: Yeseva One;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 0.94rem;
+      line-height: 1.3rem;
+      text-transform: uppercase;
+
+      color: #FFFFFF;
+      opacity: 0.3;
+      border-bottom: 1px solid #FFFFFF;
+      &.active {
+        opacity: 1;
+      }
+    }
+
+    &--title {
+      margin: 0;
+      margin-top: 12px;
+      font-family: FuturaBookC;
+      font-size: 0.94rem;
+      line-height: 1.125rem;
+
+      color: #FFFFFF;
+      opacity: 0.3;
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__description {
+
+    &-number {
+      font-family: Yeseva One;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.125rem;
+      line-height: 1.56rem;
+      text-transform: uppercase;
+
+      color: #FFFFFF;
+    }
+
+    &-title {
+      font-family: Yeseva One;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 0.94rem;
+      line-height: 1.44rem;
+      text-transform: uppercase;
+
+      color: #E3B873;
+
+    }
+
+    &-text {
+      font-family: FuturaBookC;
+      font-size: 0.94rem;
+      line-height: 1.56rem;
+
+      color: #FFFFFF;
+    }
+  }
+
+  
+  &__slider-dots {   
+    margin: 0 auto;
+    margin-top: 62px;   
+    display: flex;
+    justify-content: flex-start;
+
+  }
+
+  &__slider-dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 10px;
+
+    background-color: rgba(255, 255, 255, 0.3);;
+    border-radius: 50%;
+    display: inline-block;
+    
+    &.dot-active {
+      height: 10px;
+      width: 10px;
+      background-color: #FFFFFF;
+    }
+  }
+
+  &__slider-arrow {
+    width: 42px;
+    height: 14px;
+
+    cursor: pointer;
+    
+    &:first-child {
+      margin-right: 25px;
+      background-image: url("../images/arrow-long-left.svg");
+      background-repeat: no-repeat;
+    }
+
+    &:last-child {
+      margin-left: 25px;
+      background-image: url("../images/arrow-long.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__slider-image {
+    max-width: 765px;
+    width: 53.2vw;
+  }
+}
+
+/* Team */
+.team {
+  width: 100%;
+
+  background: linear-gradient(to bottom, #131313 0%, #131313 495px, #fff 495px, #fff 100%);
+  @media only screen and (max-width: 375px) {
+    background: $dark;
+  }
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &-title {
+    margin-top: 80px;
+    
+    padding-bottom: 45px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    font-family: Yeseva One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+    background-image: url("../images/group.svg");
+    background-repeat: no-repeat;
+    background-position: 12px 40px;
+    @media only screen and (max-width: 375px) {
+      margin-top: 50px;
+
+      font-size: 22px;
+      line-height: 138.6%;
+      background-position: 16px 40px;     
+
+    }
+  }
+
+  &-text1 {
+    margin-bottom: 60px;
+
+    font-family: FuturaBookC;
+    font-size: 1.25rem;
+    line-height: 1.69rem;
+    text-align: center;
+
+    color: #FFFFFF;
+    @media only screen and (max-width: 375px) {
+      margin-bottom: 20px;
+      font-size: 15px;
+      line-height: 135.84%;    
+      
+    }
+  }
+
+  &__cards {
+    margin-bottom: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    @media only screen and (max-width: 375px) {
+      flex-direction: column;
+    }
+  }
+
+  &__card {
+    
+    &:nth-child(1) {
+      margin-right: 105px;
+      @media only screen and (max-width: 375px) {
+        margin-right: 0;
+      }
+    }
+    &:nth-child(2) {
+      margin-right: 105px;
+      @media only screen and (max-width: 375px) {
+        margin-right: 0;
+      }
+    }
+
+    &-icon {
+      max-width: 70px;
+      max-height: 70px;
+      width: 4.86vw;
+      height: 4.86vw;
+      background: #E3B873;
+      box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5);
+      transform: translate(-50%, 50%);
+      @media only screen and (max-width: 375px) {
+        width: 70px;
+        height: 70px;
+      }
+      &.tulyakov {
+        background-image: url("../images/idea.svg");
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        
+      }
+
+      &.efimov {
+        background-image: url("../images/portfolio.svg");
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        
+      }
+
+      &.kotlyarova {
+        background-image: url("../images/design.svg");
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        
+      }
+    }
+
+    &-item {
+      max-width: 233px;
+      width: 16.2vw;
+
+      background-color: #FFFFFF;
+      box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05);
+
+      transform: translate(9%, 190%);
+      @media only screen and (max-width: 375px) {
+        width: 233px;
+      }
+    }
+
+    
+    &-title {
+      margin: 0;
+      padding-top: 22px;
+
+      font-family: Yeseva One;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.125rem;
+      line-height: 1.56rem;
+      text-align: center;
+
+      color: #181818;
+    }
+
+    &-position {
+      display: block;
+      margin-bottom: 24px;
+
+      font-family: FuturaBookC;
+      font-size: 1.125rem;
+      line-height: 1.62rem;
+      text-align: center;
+
+      color: #959595;
+
+    }
+
+    &-experience {
+      display: block;
+      padding-top: 14px;
+      padding-bottom: 14px;
+
+      font-family: Yeseva One;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 0.81rem;
+      line-height: 1.25rem;
+      text-align: center;
+      text-transform: uppercase;
+
+      color: #FFFFFF;
+      background-color: $yellow;
+    }
+  }
+  
+  &__card-image {
+    max-width: 272px;
+    max-height: 357px;
+    width: 18.9vw;
+    height: 24.8vw;
+    @media only screen and (max-width: 375px) {
+      width: 303px;
+      height: 405px; 
+      // margin-bottom: 60px;   
+    }
+    &.tulyakov {
+      background-image: url("../images/tulyakov.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      @media only screen and (max-width: 375px) {
+        margin-bottom: 60px;   
+      }
+    }
+    
+    &.kotlyarova {
+      background-image: url("../images/kotlyarova.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      @media only screen and (max-width: 375px) {
+        margin-bottom: 60px;   
+      }
+    }
+
+    &.efimov {
+      background-image: url("../images/efimov.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      @media only screen and (max-width: 375px) {
+        margin-bottom: 20px;   
+      }
+    }
+    
+  }
+
+  &-text2 {
+    margin-bottom: 88px;
+    max-width: 520px;
+
+    font-family: FuturaBookC;
+    font-size: 1.25rem;
+    line-height: 2.125rem;
+    text-align: center;
+
+    color: #363636;
+
+    position: relative;
+    @media only screen and (max-width: 375px) {
+      display: none;
+    }
+    &::before {
+      content: "";
+      display: block;
+      width: 3.9vw;
+      height: 2px;
+      max-width: 55px;
+
+      position: absolute;
+      text-align: center;
+      background-color: $yellow;
+      transform: translate(240px, -10px);
+    }
+  }
+}
+
+/* Reviews */
+.reviews {
+  width: 100%;
+
+  background-color: #FFFFFF;
+  @media only screen and (max-width: 375px) {
+    display: none;
+  }
+  &-title {
+    margin: 0 auto;
+    
+    padding-bottom: 45px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    font-family: Yeseva One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #181818;
+    background-image: url("../images/handshake.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 90%;
+    
+  }
+
+  &-text {
+    font-family: FuturaBookC;
+    font-size: 20px;
+    line-height: 27px;
+    text-align: center;
+
+    color: #363636;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-item {
+    margin-bottom: 150px;
+    max-width: 378px;
+    width: 27%;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04);
+
+    &:first-child {
+      margin-left: 100px;
+    }
+
+    &:last-child {
+      margin-right: 100px;
+    }
+
+    &--person {
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    &--image {
+      margin: 20px 24px;
+      max-width: 76px;
+      max-height: 76px;
+      width: 5.27vw;
+      height: 5.27vw;
+      
+
+      border-radius: 50%;
+
+      &.fedosova {
+        background-image: url("../images/fedosova.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+
+      }
+
+      &.afanasyev {
+        background-image: url("../images/afanasyev.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+
+      }
+
+      &.kiriev {
+        background-image: url("../images/kiriev.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+    
+    &--title {
+      margin-top: 35px;
+      max-width: 178px;
+
+      font-family: Yeseva One;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.125rem;
+      line-height: 1.44rem;
+
+      color: #181818;
+    }
+
+    &--text { 
+      margin-left: 20px;
+      margin-right: 32px;
+
+      font-family: FuturaBookC;
+      font-size: 0.94rem;
+      line-height: 1.69rem;     
+
+      color: #959595;
+    }
+
+    &__footer {
+      padding-top: 17px;
+      padding-bottom: 17px;
+      max-width: 294px;
+
+      background: #E3B873;
+      box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5);
+      transform: translate(0, 50%);
+    }
+
+    &--size {
+      padding: 17px 15px 17px 65px;
+      
+
+      font-family: Yeseva One;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.06rem;
+      line-height: 1.5rem;
+      text-transform: uppercase;
+
+      color: #FFFFFF;
+      border-right: 1px solid #FFFFFF;
+      background-image: url("../images/area.svg");
+      background-repeat: no-repeat;
+      background-position: 20% 50%;
+      
+    }
+
+    &--duration {
+      padding: 17px 7px 17px 65px;
+
+      font-family: Yeseva One;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.06rem;
+      line-height: 1.5rem;
+
+      color: #FFFFFF;
+      background-image: url("../images/calendar.svg");
+      background-repeat: no-repeat;
+      background-position: 15% 50%;
+    }
+  }
+}
+
+/* Questions */
+
+.questions {
+  width: 100%;
+
+  background: linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF 205px, #181818 205px, #181818 100%);
+  @media only screen and (max-width: 375px) {
+    background: $dark;
+  }
+  &__inner {
+    
+  }
+
+  &-form {
+    width: 62%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column; 
+    align-items: center; 
+    margin: 0 auto;
+ 
+    background: $dark;
+    @media only screen and (max-width: 375px) {
+      width: 100%;
+    }
+    &--title {
+      margin-top: 34px;
+      margin-bottom: 45px;
+
+      font-family: Yeseva One;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 28px;
+      text-align: center;
+      text-transform: uppercase;
+
+      color: #FFFFFF;
+      @media only screen and (max-width: 375px) {
+        margin-top: 0;
+      }
+    }
+
+    
+
+    &--submit {
+      margin-top: 39px;
+      margin-bottom: 27px;
+      
+      width: 213px;
+      height: 51px;
+      
+      font-family: FuturaDemiC;
+      font-size: 0.94rem;
+      line-height: 1.625rem;
+      
+      text-align: center;
+      text-transform: uppercase;
+
+      color: #FFFFFF;
+      background-color: $yellow;
+      border: none;
+      cursor: pointer;
+      @media only screen and (max-width: 375px) {
+        width: 340px;
+        height: 51px;
+      }
+    }
+
+    &--block {
+
+      &.one {
+        display: flex;
+        justify-content: space-between;
+        @media only screen and (max-width: 375px) {
+          flex-direction: column;
+          width: 90%;
+        }
+      }
+
+      & label {
+        display: block;
+
+        font-family: FuturaBookC;
+        font-size: 15px;
+        line-height: 20px;
+
+        color: rgba(255, 255, 255, 0.5);
+
+        & input {
+          margin-bottom: 48px;
+          display: block;
+          width: 231px;
+          height: 25px;
+          width: 16vw;
+          height: 1.75vw;
+
+          font-family: FuturaBookC;
+          font-size: 1.125rem;
+          line-height: 1.5rem;
+
+          color: #FFFFFF;
+          border: none;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+          background-color: $dark;
+          @media only screen and (max-width: 375px) {
+            width: 340px;
+            height: 25px;
+          }
+          &#name {
+            margin-right: 58px;
+            @media only screen and (max-width: 375px) {
+              margin-right: 0;
+            }
+          }
+
+          &#question {
+            max-width: 516px;
+            width: 37vw;
+            @media only screen and (max-width: 375px) {
+              width: 340px;
+              height: 25px;
+            }
+          }
+
+        }
+      }
+    }
+
+  }
+}
+
+
+.questions__group-label {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 5px;
+  padding-top: 3px;
+  cursor: pointer;
+
+  font-family: FuturaBookC;
+  font-size: 16px;
+  line-height: 22px;
+  
+  color: #FFFFFF;
+  @media only screen and (max-width: 375px) {
+    margin-right: 60px;  
+  }
+  
+}
+.questions__group-label input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.questions__group-indicator {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background: #e3b873;
+  border: 0px solid #000000;
+  
+}
+
+.questions__group-label:hover input ~ .questions__group-indicator,
+.questions__group-label input:focus ~ .questions__group-indicator {
+  background: #e3b873;
+}
+
+
+.questions__group-label input:checked ~ .questions__group-indicator {
+  background: #e3b873;
+}
+.questions__group-label:hover input:not([disabled]):checked ~ .questions__group-indicator,
+.questions__group-label input:checked:focus ~ .questions__group-indicator {
+  background: #e3b873;
+}
+.questions__group-label input:disabled ~ .questions__group-indicator {
+  background: #e6e6e6;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.questions__group-indicator:after {
+  box-sizing: unset;
+  content: '';
+  position: absolute;
+  display: none;
+}
+.questions__group-label input:checked ~ .questions__group-indicator:after {
+  display: block;
+}
+.questions__group-checkbox .questions__group-indicator:after {
+  left: 8px;
+  top: 4px;
+  width: 3px;
+  height: 8px;
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.questions__group-checkbox input:disabled ~ .questions__group-indicator:after {
+  border-color: #7b7b7b;
+}
+
+/* Contacts */
+.contacts {
+  width: 100%;
+  background: #181818;
+  @media only screen and (max-width: 375px) {
+    background: $dark;  
+  }
+  &__inner {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &-address {
+    margin-top: 52px;
+    margin-bottom: 25px;
+    width: 41%;
+
+    font-family: Yeseva One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #E3B873;
+    @media only screen and (max-width: 375px) {
+      margin-top: 0;
+      width: 85%;
+      font-size: 18px;
+      line-height: 138.6%;  
+    }
+  }
+
+  &__links {
+    margin-bottom: 43px;
+  }
+
+  &-link {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+
+    border-radius: 50%;
+    background-color: $yellow;
+    @media only screen and (max-width: 375px) {
+      width: 39px;
+      height: 39px;  
+    }
+    &:first-child {
+      margin-right: 15px;
+      background-image: url("../images/mail.svg");
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+    }
+
+    &:last-child {
+      margin-right: 15px;
+      background-image: url("../images/instagram.svg");
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+    }
+  }
+
+  &-map {
+    margin-bottom: 66px;
+    @media only screen and (max-width: 375px) {
+      order: -1;       
+    }
+    & iframe {
+      width: 340px;
+      height: 255px;
+    }
+  }
+}
+
+/* Footer */
+.footer {
+  width: 100%;
+
+  background-color: $dark;
+  @media only screen and (max-width: 375px) {
+     display: none;
+  }
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__logo {
+  margin: 2rem 5.125rem;
+  &-title {
+    
+    @include text-yellow;
+  }
+}
+
+.footer__nav {
+  margin-top: 0.31rem;
+  &-items {
+    list-style: none; 
+    
+    padding-left: 0;
+  
+  }
+  &-link {
+    
+    font-family: FuturaBookC;
+    font-size: 0.875rem;
+    line-height: 1rem;
+    text-align: center;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &.active {
+      color: $yellow;
+    }
+    &:hover {
+      color: $yellow;
+    }
+  }
+  &-item {
+    padding: 1.3rem;
+    display: inline-block;
+  } 
+}
+
+.footer__request {
+  margin-top: 2.1rem;
+}
+
+
